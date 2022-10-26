@@ -14,8 +14,7 @@ function SearchForm({setVideos}) {
 	const navigate = useNavigate();
 
 	const handleSearch = async () => {
-
-		const {data} = await Youtube.get(`/search?part=snippet&channelType=any&q=${query}&key=${PUBLIC_KEY}`);
+		const {data} = await Youtube.get(`/search?part=snippet&channelType=any&q=${query}&key=${process.env.API_KEY}`);
 		setVideos(data.items);
 
 		localStorage.setItem("videos", JSON.stringify(data.items));

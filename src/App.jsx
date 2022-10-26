@@ -19,7 +19,8 @@ function App() {
 
     // calling youtube api for homepage, just getting videos
     const getSomeVideos = async () => {
-        const {data} = await Youtube.get("/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=AIzaSyBvgJG2rPRmD-t5rNHmhNtOc_EscUcgNhw");
+        const KEY = process.env.API_KEY;
+        const {data} = await Youtube.get("/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key="+KEY);
 
         localStorage.setItem("videos", JSON.stringify(data.items));
         setVideos(data.items);

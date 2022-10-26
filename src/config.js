@@ -1,4 +1,3 @@
-const PUBLIC_KEY = "AIzaSyBvgJG2rPRmD-t5rNHmhNtOc_EscUcgNhw"
 const baseUrlEmbed = "https://www.youtube.com/embed/"
 
 
