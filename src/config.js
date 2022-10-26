@@ -186,6 +186,5 @@ const testData = {
 
 export {
 	baseUrlEmbed,
-	PUBLIC_KEY,
 	testData
 };
